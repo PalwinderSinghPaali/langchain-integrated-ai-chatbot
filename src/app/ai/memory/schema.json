@@ -1,0 +1,29 @@
+{
+  "gin_sales": {
+    "description": "All ginners can sale to spinners as well as another ginner. If buyer type is spinner or null, then the sale is to a spinner. If buyer type is ginner, then the sale is to another ginner.",
+    "columns": {
+      "id": "primary key",
+      "ginner_id": "ginner id",
+      "buyer": "spinner id",
+      "buyer_ginner": "ginner id",
+      "season_id": "FK to seasons",
+      "status": "Sold / Rejected / Pending / Pending for QR scanning / To be Submitted / Partially Rejected / Partially Accepted",
+      "created_at": "Timestamp",
+      "date": "Timestamp"
+    },
+    "rules": [
+      "Use gin_sales for spinner rejecting ginner sales.",
+      "spinner id is stored in 'buyer'",
+      "ginner id is stored in 'ginner_id'",
+      "if sales is sold to ginner then ginner id is stored in 'buyer_ginner'",
+      "if asked about lint sold/ lint cotton then remember it can be calculated from gin-bales table, process_id is in gin-bales table belongs to gin_processes table and bale id is stored as bale_selections table which is linked to gin_sales table using sale_id. Status of gin sale has to be between 'Pending', 'Pending for QR scanning', 'Partially Accepted', 'Partially Rejected', 'Sold' only and not 'Rejected' or 'To be Submitted'. Then from gin-bales table, you can get weight(if old_weight is null) else old_weight for those bales and sum them up to get total lint sold for that gin sale. Note, season id condition if applied will be considered in this is from gin_processes not gin_sales table"
+    ]
+  },
+  "spinners": {
+    "columns": {
+      "id": "primary key",
+      "name": "Text",
+      "country": "Text"
+    }
+  }
+}

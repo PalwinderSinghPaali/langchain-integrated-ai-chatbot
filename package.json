@@ -1,0 +1,51 @@
+{
+  "name": "nextjs-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack -p 4000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@datastax/astra-db-ts": "^2.0.1",
+    "@langchain/classic": "^1.0.4",
+    "@langchain/community": "^1.0.4",
+    "@langchain/core": "^1.0.6",
+    "@langchain/openai": "^1.1.2",
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
+    "formidable": "^3.5.4",
+    "langchain": "^1.0.6",
+    "lucide-react": "^0.525.0",
+    "mammoth": "^1.9.1",
+    "next": "15.3.1",
+    "openai": "^4.104.0",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "pgvector": "^0.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "typeorm": "^0.3.27",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/formidable": "^3.4.5",
+    "@types/node": "^20.19.6",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/pg": "^8.15.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
